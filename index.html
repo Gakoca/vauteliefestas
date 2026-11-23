@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontes: CCPassThePort + Cinzel e Plus Jakarta Sans para leitura elegante -->
+    <link href="https://db.onlinewebfonts.com/c/7986c4739d7a5bc8f1a6ad292ea40f7a?family=CCPassThePort+Regular" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- Notificações Flutuantes (Toasts) -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo-conjunto">
+            <div class="logo-imagem">
+                <img src="imagens/logo.png" alt="Logo Vauteliê" onerror="this.style.display='none'; this.parentElement.innerHTML='🎭';">
+            </div>
+            <div class="logo-texto">V A U T E L I Ê</div>
+        </div>
+        <nav>
+            <a href="#quem-somos">Quem Somos</a>
+            <a href="#proposta">Nossa Proposta</a>
+            <a href="#miv">Identidade Visual</a>
+            <a href="#equipe">Equipe</a>
+            <a href="#catalogo">Catálogo & Loja</a>
+            <a href="#contato">Contato</a>
+            <button id="btn-abrir-carrinho" class="btn-carrinho" aria-label="Abrir carrinho">
+                🛒 Pedido (<span id="contador-carrinho">0</span>)
+            </button>
+        </nav>
+    </header>
+
+    <!-- Banner Hero -->
+    <div class="hero-banner">
+        <div class="hero-conteudo">
+            <span class="hero-subtitulo">Estética Vaudeville & Ateliê Artesanal</span>
+            <h1>Transformamos festas em universos excêntricos e inesquecíveis</h1>
+            <p>Decorações cenográficas, fantasias sob medida e experiências teatrais inspiradas no charme sombrio e melancólico do circo clássico.</p>
+            <a href="#catalogo" class="btn-primario btn-hero">Explorar Catálogo & Loja ✨</a>
+        </div>
+    </div>
+
+    <!-- SEÇÃO DE VÍDEOS INSTITUCIONAIS (LADO A LADO) -->
+    <section id="video-empresa" class="secao-animada">
+        <h2>Nosso Universo em Movimento</h2>
+        <p class="subtitulo-secao">Assista aos bastidores das nossas produções, cenografias e figurinos exclusivos.</p>
+        
+        <div class="grade-videos">
+            <!-- Vídeo 1 -->
+            <div class="card-video">
+                <div class="moldura-video">
+                    <video controls poster="imagens/banner1.jpg" preload="metadata">
+                        <source src="videos/apresentacao.mp4" type="video/mp4">
+                        Seu navegador não suporta a reprodução de vídeos.
+                    </video>
+                </div>
+                <h4>Conheça Nossa Empresa!</h4>
+            </div>
+
+            <!-- Vídeo 2 -->
+            <div class="card-video">
+                <div class="moldura-video">
+                    <video controls poster="imagens/banner2.jpg" preload="metadata">
+                        <source src="videos/video60.mp4" type="video/mp4">
+                        Seu navegador não suporta a reprodução de vídeos.
+                    </video>
+                </div>
+                <h4>Nosso Ateliê</h4>
+            </div>
+        </div>
+    </section>
+
+   <!-- SEÇÃO — MIV (Manual de Identidade Visual Contínuo) -->
+    <section id="miv" class="secao-animada">
+        <h2>Identidade Visual (MIV)</h2>
+        <p class="subtitulo-secao">Painel contínuo do manual da Vauteliê criado no Illustrator. Clique em qualquer parte para ampliar.</p>
+
+        <div class="painel-miv-continuo">
+            <img src="imagens/miv-01.jpg" alt="MIV Vauteliê - Parte 1" onclick="abrirImagemMiv(this.src, 'MIV Vauteliê — Parte 1')" onerror="this.src='https://placehold.co/600x450/20192e/d4af37?text=MIV+01'">
+            <img src="imagens/miv-02.jpg" alt="MIV Vauteliê - Parte 2" onclick="abrirImagemMiv(this.src, 'MIV Vauteliê — Parte 2')" onerror="this.src='https://placehold.co/600x450/20192e/d4af37?text=MIV+02'">
+            <img src="imagens/miv-03.jpg" alt="MIV Vauteliê - Parte 3" onclick="abrirImagemMiv(this.src, 'MIV Vauteliê — Parte 3')" onerror="this.src='https://placehold.co/600x450/20192e/d4af37?text=MIV+03'">
+            <img src="imagens/miv-04.jpg" alt="MIV Vauteliê - Parte 4" onclick="abrirImagemMiv(this.src, 'MIV Vauteliê — Parte 4')" onerror="this.src='https://placehold.co/600x450/20192e/d4af37?text=MIV+04'">
+            <img src="imagens/miv-05.jpg" alt="MIV Vauteliê - Parte 5" onclick="abrirImagemMiv(this.src, 'MIV Vauteliê — Parte 5')" onerror="this.src='https://placehold.co/600x450/20192e/d4af37?text=MIV+05'">
+            <img src="imagens/miv-06.jpg" alt="MIV Vauteliê - Parte 6" onclick="abrirImagemMiv(this.src, 'MIV Vauteliê — Parte 6')" onerror="this.src='https://placehold.co/600x450/20192e/d4af37?text=MIV+06'">
+            <img src="imagens/miv-07.jpg" alt="MIV Vauteliê - Parte 7" onclick="abrirImagemMiv(this.src, 'MIV Vauteliê — Parte 7')" onerror="this.src='https://placehold.co/600x450/20192e/d4af37?text=MIV+07'">
+        </div>
+    </section>
+
+    <!-- SEÇÃO 1 — Quem Somos -->
+    <section id="quem-somos" class="secao-animada">
+        <h2>Quem Somos</h2>
+        <div class="caixa-texto-destaque">
+            <p>O nome <strong>Vauteliê</strong> representa o conceito principal da nossa produtora — a mistura do termo <em>Vaudeville</em>, que traz toda a estética circense, bizarra e melancólica característica das obras de Tim Burton, unida à palavra <em>Ateliê</em>, que representa o nosso foco em decoração de festas, confecção de roupas e criação artística.</p>
+            <p>Nascemos da vontade de transformar momentos comuns em experiências <strong>excêntricas, romanescas e inesquecíveis</strong>. Somos uma equipe criativa dedicada a levar magia, mistério e beleza singular para cada evento que tocamos.</p>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2 — Nossa Proposta -->
+    <section id="proposta" class="secao-animada">
+        <h2>Nossa Proposta</h2>
+        <div class="grade-proposta">
+            <div class="card-proposta">
+                <span class="icone-proposta">🎪</span>
+                <h3>Decorações Temáticas</h3>
+                <p>Cenografia completa que mistura o charme antigo do circo, o bizarro e o elegante, transformando seu evento em um universo próprio.</p>
+            </div>
+            <div class="card-proposta">
+                <span class="icone-proposta">🎩</span>
+                <h3>Fantasias Exclusivas</h3>
+                <p>Confecção artesanal e aluguel de trajes ricos em detalhes, texturas vitorianas e personalidade única.</p>
+            </div>
+            <div class="card-proposta">
+                <span class="icone-proposta">🎭</span>
+                <h3>Experiência Completa</h3>
+                <p>Do conceito à execução com animadores e ambientação cênica, cuidamos de tudo com arte e dedicação.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3 — Equipe com Fotos -->
+    <section id="equipe" class="secao-animada">
+        <h2>Nossa Equipe</h2>
+        <p class="subtitulo-secao">Conheça as mentes criativas por trás da Vauteliê:</p>
+
+        <div class="grade-equipe">
+            <div class="cartao-membro">
+                <div class="foto-membro-wrapper">
+                    <img src="imagens/rebeca.jpg" alt="Rebeca Heise Gonçalves" onerror="this.src='https://placehold.co/300x300/1e1926/d4af37?text=Rebeca'">
+                </div>
+                <h4>Rebeca Heise Gonçalves</h4>
+                <p class="funcao">Criação & Design</p>
+                <p class="bio-membro">A alma artística da equipe, responsável por dar forma e cor às nossas ideias com sensibilidade e bom gosto.</p>
+            </div>
+
+            <div class="cartao-membro">
+                <div class="foto-membro-wrapper">
+                    <img src="imagens/gabriela.jpg" alt="Gabriela Alves de Oliveira" onerror="this.src='https://placehold.co/300x300/1e1926/d4af37?text=Gabriela'">
+                </div>
+                <h4>Gabriela Alves de Oliveira</h4>
+                <p class="funcao">Conteúdo & Planejamento</p>
+                <p class="bio-membro">Organiza, planeja e dá vida às nossas ideias, cuidando para que cada projeto seja completo e especial.</p>
+            </div>
+
+            <div class="cartao-membro">
+                <div class="foto-membro-wrapper">
+                    <img src="imagens/nikolas.jpg" alt="Nikolas Leal Bellam de Moraes" onerror="this.src='https://placehold.co/300x300/1e1926/d4af37?text=Nikolas'">
+                </div>
+                <h4>Nikolas Leal Bellam de Moraes</h4>
+                <p class="funcao">Tecnologia & Produção</p>
+                <p class="bio-membro">Transforma conceitos em realidade, unindo criatividade e técnica para entregar tudo com qualidade.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4 — Catálogo / Loja Interativa -->
+    <section id="catalogo" class="secao-animada">
+        <h2>Catálogo & Loja Vauteliê</h2>
+        <p class="subtitulo-secao">Filtre por categoria, busque por tema e monte o orçamento mágico do seu evento.</p>
+
+        <!-- Barra de Controles: Filtros + Busca -->
+        <div class="controles-catalogo">
+            <div class="filtros-catalogo">
+                <button class="btn-filtro ativo" data-filtro="todos">Todos os Itens</button>
+                <button class="btn-filtro" data-filtro="decoracao">Decorações Temáticas</button>
+                <button class="btn-filtro" data-filtro="fantasia">Fantasias Exclusivas</button>
+            </div>
+            <div class="busca-wrapper">
+                <input type="text" id="campo-busca" placeholder="🔍 Buscar decoração ou fantasia...">
+            </div>
+        </div>
+
+        <!-- Grade onde o JavaScript vai inserir os produtos -->
+        <div id="grade-produtos" class="grade"></div>
+    </section>
+
+    <!-- SEÇÃO 5 — Contato -->
+    <section id="contato" class="secao-animada">
+        <h2>Contato</h2>
+        <p class="subtitulo-secao">Quer transformar sua festa em um mundo de fantasia? Fale conosco!</p>
+        <div class="redes">
+            <a href="mailto:vauteliegakoca@gmail.com" class="btn-rede">✉️ E-mail: vauteliegakoca@gmail.com</a>
+            <span class="btn-rede">📍 São Paulo — Brasil</span>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Vauteliê — Gabriela Alves de Oliveira, Nikolas Leal Bellam de Moraes, Rebeca Heise Gonçalves. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Gaveta Lateral do Carrinho -->
+    <div id="overlay-carrinho" class="overlay oculto"></div>
+    <aside id="gaveta-carrinho" class="gaveta-carrinho">
+        <div class="carrinho-topo">
+            <h3>🛒 Seu Pedido Vauteliê</h3>
+            <button id="btn-fechar-carrinho" class="btn-fechar">&times;</button>
+        </div>
+        <div id="lista-itens-carrinho" class="carrinho-corpo"></div>
+        <div class="carrinho-rodape">
+            <div class="total-linha">
+                <span>Total Estimado:</span>
+                <strong id="valor-total-carrinho">R$ 0,00</strong>
+            </div>
+            <button id="btn-finalizar-pedido" class="btn-primario">Finalizar Solicitação</button>
+        </div>
+    </aside>
+
+    <!-- Modal de Detalhes do Produto / Checkout -->
+    <div id="modal-geral" class="modal oculto">
+        <div class="modal-conteudo">
+            <button id="btn-fechar-modal" class="btn-fechar">&times;</button>
+            <div id="corpo-modal"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
